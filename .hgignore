@@ -1,0 +1,9 @@
+syntax: glob
+AutoAsync/obj
+AutoAsync*.suo
+bin*
+_ReSharper.*
+AutoAsync.5.1.ReSharper.user
+*.csproj.user
+AutoAsync.Tests/bin
+AutoAsync.Tests/obj

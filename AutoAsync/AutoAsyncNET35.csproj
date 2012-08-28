@@ -1,0 +1,88 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{6BBCFF40-975C-40EF-9098-720182762376}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>AutoAsync</RootNamespace>
+    <AssemblyName>AutoAsync</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\binNET_3.5\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>..\binNET_3.5\Debug\AutoAsync.XML</DocumentationFile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\binNET_3.5\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>..\binNET_3.5\Release\AutoAsync.XML</DocumentationFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Castle.Core">
+      <HintPath>References\NET35\Castle.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.ServiceModel.Web" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Base\BaseAsyncProxy.cs" />
+    <Compile Include="Helpers\MethodInvocationInterceptor.cs" />
+    <Compile Include="Base\MethodInvocationParams.cs" />
+    <Compile Include="Helpers\FullFrameworkCustomAttributeBuilderCreator.cs" />
+    <Compile Include="Helpers\ProxyGeneratorHolder.cs" />
+    <Compile Include="Helpers\SilverlightEnumerableExtensions.cs" />
+    <Compile Include="IAsyncProxy.cs" />
+    <Compile Include="IAsyncProxyCreator.cs" />
+    <Compile Include="IExtendedAsyncResult.cs" />
+    <Compile Include="Helpers\SilverlightCustomAttributeBuilderCreator.cs" />
+    <Compile Include="Wcf\WcfAsyncInterfaceCreator.cs" />
+    <Compile Include="Wcf\WcfAsyncProxyCache.cs" />
+    <Compile Include="Wcf\WcfAsyncProxyConfiguration.cs" />
+    <Compile Include="Wcf\WcfExtendedAsyncResult.cs" />
+    <Compile Include="Wcf\WcfAsyncProxy.cs" />
+    <Compile Include="Wcf\WcfAsyncProxyCreator.cs" />
+    <Compile Include="Wcf\WcfAsyncMethodsHolder.cs" />
+    <Compile Include="Wcf\WcfExtendedAsyncResultBase.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
